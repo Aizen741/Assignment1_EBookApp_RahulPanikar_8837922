@@ -23,8 +23,8 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/bookGrid"
-        android:layout_width="375dp"
-        android:layout_height="468dp"
+        android:layout_width="326dp"
+        android:layout_height="427dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         app:columnCount="3"
@@ -277,8 +277,8 @@
     <!-- [Results Container Remains Unchanged] -->
     <LinearLayout
         android:id="@+id/resultsContainer"
-        android:layout_width="377dp"
-        android:layout_height="178dp"
+        android:layout_width="370dp"
+        android:layout_height="235dp"
         android:layout_marginTop="8dp"
         android:background="#DFA6A6"
         android:orientation="vertical"
@@ -288,18 +288,31 @@
         app:layout_constraintTop_toBottomOf="@id/bookGrid">
 
         <TextView
-            android:layout_width="378dp"
+            android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:text="Selected Book Details"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
+
+        <!-- [TextView for Total Price] -->
+        <TextView
+            android:id="@+id/totalPriceTextView"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:text="Total Cost: "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000"
+            android:textSize="14sp" />
 
         <ScrollView
             android:id="@+id/scrollView"
-            android:layout_width="352dp"
-            android:layout_height="134dp"
+            android:layout_width="340dp"
+            android:layout_height="160dp"
+            android:background="#EDE3E3"
+            android:scrollbarStyle="insideInset"
             android:textAlignment="center"
             android:visibility="visible">
 

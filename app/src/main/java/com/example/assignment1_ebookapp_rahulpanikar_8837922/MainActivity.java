@@ -8,9 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-
+    private TextView totalPriceTextView; // <-- Moved inside the class
     private CheckBox[] checkBoxes = new CheckBox[9];
     private Book[] books = {
             new Book("Regreting You ~ Colleen Hoover", "Morgan and her daughter Clara find themselves heartbroken and unexpectedly navigating a shattering loss. Both women spiral, finding their own path to resolution and peace, and discover that love can survive anything, even when it's wrapped in regret.","Price : 34 cad"),
@@ -28,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        totalPriceTextView = findViewById(R.id.totalPriceTextView); // <-- Initialize the TextView
         initializeBookSelection();
     }
 
@@ -49,16 +49,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateSelectedBooks(LinearLayout container) {
         container.removeAllViews();
+        double totalCost = 0;  // Initialize the total cost to 0
         for (int i = 0; i < checkBoxes.length; i++) {
             if (checkBoxes[i].isChecked()) {
                 TextView bookView = new TextView(this);
                 bookView.setText(books[i].getName() + "\n" + books[i].getDescription() + "\n" + books[i].getPrice());
                 container.addView(bookView);
+                totalCost += extractPriceFromText(books[i].getPrice());  // Add the book's price to the total cost
             }
         }
+        totalPriceTextView.setText(String.format("Total Cost: %.2f CAD", totalCost));
     }
 
-
+    private double extractPriceFromText(String priceText) {
+        return Double.parseDouble(priceText.split(" ")[2]);  // Extracts the numerical value of the price from the text
+    }
 }
 
 
