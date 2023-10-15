@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment1_EBookApp_RahulPanikar_8837922</string>
+    <string name="description_image1">Book cover image 1</string>
+    <string name="description_image2">Book cover image 2</string>
+    <string name="description_image3">Book cover image 3</string>
+    <string name="description_image4">Book cover image 4</string>
+    <string name="description_image5">Book cover image 5</string>
+    <string name="description_image6">Book cover image 6</string>
+    <string name="description_image7">Book cover image 7</string>
+    <string name="description_image8">Book cover image 8</string>
+    <string name="description_image9">Book cover image 9</string>
+</resources>

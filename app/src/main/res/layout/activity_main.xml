@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="E Book App"
+        android:textColor="#000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/bookGrid"
+        android:layout_width="413dp"
+        android:layout_height="413dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:columnCount="3"
+        app:layout_constraintBottom_toTopOf="@+id/resultsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image1"
+            android:src="@drawable/image1"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image2"
+            android:src="@drawable/image2"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image3"
+            android:src="@drawable/image3"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image4"
+            android:src="@drawable/image4"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image5"
+            android:src="@drawable/image5"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image6"
+            android:src="@drawable/image6"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image7"
+            android:src="@drawable/image7"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image8"
+            android:src="@drawable/image8"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/image9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/description_image9"
+            android:src="@drawable/image9"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/resultsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:background="#FFEBCC"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookGrid">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Book Details"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/selectedBooksContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+            <!-- Dynamically added book details will go here -->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/totalCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Total Cost: "
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
