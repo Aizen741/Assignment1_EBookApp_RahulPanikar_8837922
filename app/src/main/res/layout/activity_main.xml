@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FDFDFD"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -16,15 +16,15 @@
         android:fontFamily="sans-serif-black"
         android:text="E Book App"
         android:textColor="#000"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/bookGrid"
-        android:layout_width="401dp"
-        android:layout_height="477dp"
+        android:layout_width="375dp"
+        android:layout_height="468dp"
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         app:columnCount="3"
@@ -57,9 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_margin="8dp"
-                android:background="?android:selectableItemBackground"
-                android:buttonTint="#FF0000" />
+                android:buttonTint="#F8F5F5" />
         </FrameLayout>
 
         <!-- Image 2 -->
@@ -85,9 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_margin="8dp"
-                android:background="?android:selectableItemBackground"
-                android:buttonTint="#FF0000" />
+                android:buttonTint="#FFFFFF" />
         </FrameLayout>
         <!-- Image 3 -->
         <FrameLayout
@@ -100,7 +96,7 @@
             <ImageView
                 android:id="@+id/image3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="154dp"
                 android:background="#FFFFFF"
                 android:clickable="true"
                 android:contentDescription="@string/description_image3"
@@ -112,9 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_margin="8dp"
-                android:background="?android:selectableItemBackground"
-                android:buttonTint="#FF0000" />
+                android:buttonTint="#FFFFFF" />
         </FrameLayout>
 
         <!-- Image 4 -->
@@ -138,7 +132,8 @@
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end" />
+                android:layout_gravity="bottom|end"
+                android:buttonTint="#FFFFFF" />
 
         </FrameLayout>
 
@@ -163,7 +158,9 @@
                 android:id="@+id/checkBox5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end" />
+                android:layout_gravity="bottom|end"
+                android:buttonTint="#FFFEFE"
+                app:buttonIconTint="@color/white" />
 
         </FrameLayout>
 
@@ -188,7 +185,9 @@
                 android:id="@+id/checkBox6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end" />
+                android:layout_gravity="bottom|end"
+                android:buttonTint="#FDFDFD"
+                app:buttonIconTint="#F8F7F7" />
 
         </FrameLayout>
 
@@ -213,7 +212,9 @@
                 android:id="@+id/checkBox7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end" />
+                android:layout_gravity="bottom|end"
+                android:buttonTint="#FDFDFD"
+                app:buttonIconTint="#F4F4F2" />
 
         </FrameLayout>
 
@@ -240,9 +241,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_margin="8dp"
-                android:background="?android:selectableItemBackground"
-                android:buttonTint="#FF0000" />
+                android:buttonTint="#FDFDFD" />
         </FrameLayout>
 
 
@@ -268,9 +267,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_margin="8dp"
-                android:background="?android:selectableItemBackground"
-                android:buttonTint="#FF0000" />
+                android:backgroundTint="#FEFFFF"
+                android:buttonTint="#FDFDFD" />
         </FrameLayout>
 
 
@@ -279,10 +277,10 @@
     <!-- [Results Container Remains Unchanged] -->
     <LinearLayout
         android:id="@+id/resultsContainer"
-        android:layout_width="379dp"
-        android:layout_height="158dp"
-        android:layout_marginTop="16dp"
-        android:background="#FFEBCC"
+        android:layout_width="377dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="8dp"
+        android:background="#DFA6A6"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -290,30 +288,20 @@
         app:layout_constraintTop_toBottomOf="@id/bookGrid">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="378dp"
             android:layout_height="wrap_content"
             android:text="Selected Book Details"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#000"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/totalCost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Total Cost: "
-            android:textColor="#000"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <ScrollView
             android:id="@+id/scrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bookGrid">
+            android:layout_width="352dp"
+            android:layout_height="134dp"
+            android:textAlignment="center"
+            android:visibility="visible">
 
             <LinearLayout
                 android:id="@+id/selectedBooksContainer"
@@ -323,5 +311,7 @@
                 <!-- Dynamically added book details will go here -->
             </LinearLayout>
         </ScrollView>
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
